@@ -1,0 +1,91 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000511; /* 深海背景色 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+}
+
+#game-container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+canvas {
+    display: block;
+}
+
+#ui-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+#score-board {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00f3ff;
+}
+
+#instructions {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0.6;
+}
+
+#game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 10, 30, 0.9);
+    padding: 40px;
+    border: 2px solid #00f3ff;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 30px #00f3ff;
+    pointer-events: auto;
+    z-index: 100;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#restart-btn {
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 18px;
+    background: #00f3ff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#restart-btn:hover {
+    background: #0088ff;
+    box-shadow: 0 0 15px #00f3ff;
+}
+
+/* 深海迷雾效果实现 */
+#fog-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle 250px at center, transparent 0%, rgba(0, 5, 17, 0.95) 100%);
+    mix-blend-mode: multiply;
+}
